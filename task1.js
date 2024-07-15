@@ -47,15 +47,18 @@ employee1.displayInfo();
 
 
 /**
- * Класс EmployeeNew наследуется от Employee
-@param {string} surname - фамилия сотрудника
+ * Класс Manager наследуется от Employee
+@param {string} department - отдел, в котором работает сотрудник
 @param {number} age - возраст сотрудника
 @param displayAge - метод, выводящий возраст сотрудника 
 */
 class EmployeeNew extends Employee {
-    surname;
+    department;
     age;
 
+    displayInfo() {
+        console.log(`Сотрудника зовут ${this.name} его возраст ${this.age} работает в отделе ${this.department}`);
+    }
 
     displayAge() {
         console.log(`Мой возраст ${this.age}`);
@@ -63,7 +66,7 @@ class EmployeeNew extends Employee {
 }
 
 const employeeNew1 = new EmployeeNew("Максим");
-employeeNew1.surname = "Петров";
+employeeNew1.department = "Отдел продаж";
 employeeNew1.age = 25
 employeeNew1.displayInfo();
 employeeNew1.displayAge();
