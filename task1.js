@@ -41,5 +41,29 @@ class Employee {
 
 }
 
-const employee1 = new Employee("Иван")
+const employee1 = new Employee("Иван");
 
+employee1.displayInfo();
+
+
+/**
+ * Класс EmployeeNew наследуется от Employee
+@param {string} surname - фамилия сотрудника
+@param {number} age - возраст сотрудника
+@param displayAge - метод, выводящий возраст сотрудника 
+*/
+class EmployeeNew extends Employee {
+    surname;
+    age;
+
+
+    displayAge() {
+        console.log(`Мой возраст ${this.age}`);
+    }
+}
+
+const employeeNew1 = new EmployeeNew("Максим");
+employeeNew1.surname = "Петров";
+employeeNew1.age = 25
+employeeNew1.displayInfo();
+employeeNew1.displayAge();
